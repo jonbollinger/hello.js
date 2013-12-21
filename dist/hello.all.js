@@ -57,7 +57,9 @@ hello.utils.extend( hello, {
 		response_type : 'token',
 		display       : 'popup',
 		state         : '',
-
+		
+		popup_callback : null,
+		
 		//
 		// OAuth 1 shim
 		// The path to the OAuth1 server for signing user requests
@@ -400,7 +402,13 @@ hello.utils.extend( hello, {
 				'Authentication',
 				"resizeable=true,height=" + windowHeight + ",width=" + windowWidth + ",left="+((window.innerWidth-windowWidth)/2)+",top="+((window.innerHeight-windowHeight)/2)
 			);
-
+			
+			// If set, add event listener to popup
+			
+			if ( opts.popup_callback != null ) {
+				opts.popup_callback(popup);
+			}
+			
 			// Ensure popup window has focus upon reload, Fix for FF.
 			popup.focus();
 
@@ -412,6 +420,10 @@ hello.utils.extend( hello, {
 					}
 				}
 			}, 100);
+			
+			
+			
+			
 		}
 
 		else {
