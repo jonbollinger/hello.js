@@ -58,7 +58,10 @@ hello.utils.extend( hello, {
 		display       : 'popup',
 		state         : '',
 		
+		
+		popup_target : 'Authentication',
 		popup_callback : null,
+		popup_options : "resizeable=true,height=" + windowHeight + ",width=" + windowWidth + ",left="+((window.innerWidth-windowWidth)/2)+",top="+((window.innerHeight-windowHeight)/2),
 		
 		//
 		// OAuth 1 shim
@@ -397,11 +400,7 @@ hello.utils.extend( hello, {
 			var windowWidth = opts.window_width || 500;
 
 			// Trigger callback
-			var popup = window.open(
-				url,
-				'Authentication',
-				"resizeable=true,height=" + windowHeight + ",width=" + windowWidth + ",left="+((window.innerWidth-windowWidth)/2)+",top="+((window.innerHeight-windowHeight)/2)
-			);
+			var popup = window.open(url,opts.popup_target, opts.popup_options);
 			
 			// If set, add event listener to popup
 			
