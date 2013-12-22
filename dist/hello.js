@@ -9,7 +9,7 @@
  * @copyright Andrew Dodson, 2012 - 2013
  * @license MIT: You are free to use and modify this code for any use, on the condition that this copyright notice remains.
  */
-
+ 
 // Can't use strict with arguments.callee
 //"use strict";
 
@@ -61,7 +61,7 @@ hello.utils.extend( hello, {
 		
 		popup_target : 'Authentication',
 		popup_callback : null,
-		popup_options : "resizeable=true,height=" + windowHeight + ",width=" + windowWidth + ",left="+((window.innerWidth-windowWidth)/2)+",top="+((window.innerHeight-windowHeight)/2),
+		popup_options : "resizeable=true",
 		
 		//
 		// OAuth 1 shim
