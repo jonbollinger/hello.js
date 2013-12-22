@@ -61,7 +61,7 @@ hello.utils.extend( hello, {
 		
 		popup_target : 'Authentication',
 		popup_callback : null,
-		popup_options : "resizeable=true,height=" + windowHeight + ",width=" + windowWidth + ",left="+((window.innerWidth-windowWidth)/2)+",top="+((window.innerHeight-windowHeight)/2),
+		popup_options : "resizeable=true",
 		
 		//
 		// OAuth 1 shim
